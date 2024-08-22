@@ -37,24 +37,28 @@ function Calendar() {
   };
 
   return (
-    <div style={{ display: "flex" }}>
+    <div className={styles.main}>
       <div className={styles.left}>
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView={"dayGridMonth"}
           headerToolbar={{
-            start: "today prev,next", // normally on the left
+            start: "today prev,next",
             center: "title",
-            end: "dayGridMonth,timeGridWeek,timeGridDay", // normally on the right
+            end: "dayGridMonth,timeGridWeek,timeGridDay",
           }}
-          height={"90vh"}
+          height={"70vh"}
+          backgroundColor={"#f5f5f5"}
+          border={"6px solid #ccc"}
           dateClick={handleDateClick}
           events={selectedDates.map((date) => ({
             start: date,
             display: "background",
             backgroundColor: "#ff9f89",
+            textColor: "white",
           }))}
         />
+
         <div className={styles.selection}>
           <Selection />
         </div>

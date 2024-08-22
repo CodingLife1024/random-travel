@@ -1,9 +1,18 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 20px;
+}
+
 .left {
     flex: 10;
+    height: 100vh;
 }
 
 .selection{
     flex: 1;
+    height: 30vh;
 }
 
 .right {
