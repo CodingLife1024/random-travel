@@ -1,0 +1,11 @@
+.left {
+    flex: 10;
+}
+
+.selection{
+    flex: 1;
+}
+
+.right {
+    flex: 4;
+}

@@ -3,6 +3,8 @@ import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import Selection from "../Selection/Selection";
+import styles from "./Calendar.module.css";
 
 function Calendar() {
   const [selectedDates, setSelectedDates] = useState([]);
@@ -36,7 +38,7 @@ function Calendar() {
 
   return (
     <div style={{ display: "flex" }}>
-      <div style={{ flex: 1 }}>
+      <div className={styles.left}>
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView={"dayGridMonth"}
@@ -53,8 +55,11 @@ function Calendar() {
             backgroundColor: "#ff9f89",
           }))}
         />
+        <div className={styles.selection}>
+          <Selection />
+        </div>
       </div>
-      <div style={{ flex: 0.3, padding: "10px", borderLeft: "1px solid #ccc" }}>
+      <div className={styles.right}>
         <button onClick={clearSelection} style={{ marginTop: "10px" }}>
           Clear Selection
         </button>
