@@ -6,6 +6,15 @@ import interactionPlugin from "@fullcalendar/interaction";
 import Selection from "../Selection/Selection";
 import styles from "./Calendar.module.css";
 
+// import bootstrapPlugin from "@fullcalendar/bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+// needed for the style wrapper
+import styled from "@emotion/styled";
+
+// add styles as css
+import { StyleWrapper } from './StyleWrapper';
+
 function Calendar() {
   const [selectedDates, setSelectedDates] = useState([]);
 
@@ -39,29 +48,31 @@ function Calendar() {
   return (
     <div className={styles.main}>
       <div className={styles.left}>
+        <StyleWrapper>
         <FullCalendar
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView={"dayGridMonth"}
           headerToolbar={{
             start: "today prev,next",
             center: "title",
-            end: "dayGridMonth,timeGridWeek,timeGridDay",
+            end: "",
           }}
-          height={"70vh"}
-          backgroundColor={"#f5f5f5"}
-          border={"6px solid #ccc"}
+          height={"auto"}
+          backgroundColor={"red"}
+          border={"6px solid black"}
           dateClick={handleDateClick}
           events={selectedDates.map((date) => ({
             start: date,
             display: "background",
-            backgroundColor: "#ff9f89",
+            backgroundColor: "green",
             textColor: "white",
           }))}
+          // themeSystem="bootstrap"
         />
-
-        <div className={styles.selection}>
-          <Selection />
-        </div>
+        </StyleWrapper>
+      </div>
+      <div className={styles.middle}>
+        <Selection />
       </div>
       <div className={styles.right}>
         <button onClick={clearSelection} style={{ marginTop: "10px" }}>

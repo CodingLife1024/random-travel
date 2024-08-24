@@ -6,15 +6,22 @@
 }
 
 .left {
-    flex: 10;
-    height: 100vh;
+    flex: 2;
+    height: fit-content;
+    padding: 10px;
+
 }
 
-.selection{
-    flex: 1;
-    height: 30vh;
+.middle{
+    flex: 4;
+    height: 100vh;
+    padding: 10px;
+    background-color: red;
 }
 
 .right {
-    flex: 4;
+    flex: 2;
+    height: 100vh;
+    padding: 10px;
+    background-color: blue;
 }
