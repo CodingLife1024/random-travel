@@ -4,15 +4,39 @@ import styles from "./Selection.module.css";
 function Selection() {
     return (
         <>
-        <div className={styles.left}>
-            <div className={styles.title}>Select Dates</div>
-            <div className={styles.subtitle}>Click on a date to select or deselect it</div>
-            <div className={styles.subtitle}>Selected dates will be highlighted</div>
-        </div>
-        <div className={styles.right}>
-            <div className={styles.title}>Selected Dates</div>
-            <div className={styles.subtitle}>Dates you have selected will appear here</div>
-        </div>
+            <div className={styles.identity}>
+                <div className={styles.image}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.name}>
+                    <input type="text" id="textbox" name="textbox"/></div>
+                <div className={styles.username}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.age}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.sex}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+            </div>
+            <div className={styles.identity}>
+                <div className={styles.image}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.name}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.username}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.age}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+                <div className={styles.sex}>
+                    <input type="text" id="textbox" name="textbox"/>
+                </div>
+            </div>
         </>
     );
 }
