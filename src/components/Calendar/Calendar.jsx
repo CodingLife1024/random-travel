@@ -82,11 +82,11 @@ function Calendar() {
           Save Selection
         </button>
         <h3>Selected Dates</h3>
-        <ul>
+        <div className={styles.date}>
           {selectedDates.map((date, index) => (
-            <h4>{formatDate(date)}</h4>
+            <h4 className={styles.datefont}>{formatDate(date)}</h4>
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );
