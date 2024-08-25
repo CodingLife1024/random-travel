@@ -3,15 +3,17 @@ import styles from "./Selection.module.css";
 
 function Selection() {
     return (
-        <div>
-            <h1>Selection</h1>
-            <div>
-                <h1>Selection</h1>
-            </div>
-            <div>
-                <h1>Selection</h1>
-            </div>
+        <>
+        <div className={styles.left}>
+            <div className={styles.title}>Select Dates</div>
+            <div className={styles.subtitle}>Click on a date to select or deselect it</div>
+            <div className={styles.subtitle}>Selected dates will be highlighted</div>
         </div>
+        <div className={styles.right}>
+            <div className={styles.title}>Selected Dates</div>
+            <div className={styles.subtitle}>Dates you have selected will appear here</div>
+        </div>
+        </>
     );
 }
 
