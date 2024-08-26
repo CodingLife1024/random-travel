@@ -6,14 +6,17 @@ function Selection() {
 
     const minBudget = 0;
     const maxBudget = 1000000;
-    const midBudget = 100000; // Desired middle point of the exponential scale
+    const midBudget = 100000;
 
     const handleSliderChange = (e) => {
         setSliderValue(e.target.value);
     };
 
-    // Exponential transformation
-    const budget = Math.round(minBudget + ((maxBudget - minBudget) * (Math.pow(10, sliderValue / 1000) - 1) / 9));
+      // Calculate the base for the exponential transformation
+    const logBase = Math.log(maxBudget / midBudget) / 500; // 500 is the midpoint of the slider
+
+      // Exponential transformation
+    const budget = Math.round(minBudget + (midBudget * (Math.exp(logBase * (sliderValue - 500)))));
 
     return (
         <>
