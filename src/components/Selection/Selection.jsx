@@ -10,6 +10,7 @@ function Selection() {
 
     const handleSliderChange = (e) => {
         setSliderValue(e.target.value);
+        console.log("Slider value:", e.target.value);
     };
 
       // Calculate the base for the exponential transformation
