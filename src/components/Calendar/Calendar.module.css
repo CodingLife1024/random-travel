@@ -3,6 +3,7 @@
     flex-direction: row;
     height: 100vh;
     padding: 20px;
+    overflow: hidden;
 }
 
 .left {
@@ -16,6 +17,7 @@
     flex: 4;
     height: 100vh;
     padding: 10px;
+    overflow-y: scroll;
 }
 
 .right {
@@ -32,7 +34,7 @@
 
 .datefont{
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 400;
     color: black;
     margin: 0px;
     padding: 0px;

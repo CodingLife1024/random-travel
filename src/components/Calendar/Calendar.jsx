@@ -81,7 +81,7 @@ function Calendar() {
         <button onClick={saveSelection} style={{ marginTop: "10px" }}>
           Save Selection
         </button>
-        <h3>Selected Dates</h3>
+        <h3 className={styles.dates}>Selected Dates</h3>
         <div className={styles.date}>
           {selectedDates.map((date, index) => (
             <h4 className={styles.datefont}>{formatDate(date)}</h4>

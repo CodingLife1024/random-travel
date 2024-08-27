@@ -1,0 +1,51 @@
+.category {
+    background-color: bisque;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    background-color: lightpink;
+    padding: 2px;
+    border: 2px solid black;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of elements */
+    justify-content: center; /* Distributes space between elements */
+    align-items: flex-start;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container > * {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid black;
+    min-width: fit-content; /* Adjust width to content */
+    width: calc((100% / 3) - 20px); /* Adjust width to fit 4 elements per row */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+@media (max-width: 800px) {
+    .container > * {
+        width: calc((100% / 2) - 20px); /* Fit 2 elements per row on smaller screens */
+    }
+}
+
+@media (max-width: 500px) {
+    .container > * {
+        width: calc(100% - 20px); /* Fit 1 element per row on very small screens */
+    }
+}
