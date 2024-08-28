@@ -28,19 +28,19 @@ function Selection() {
                 <div className={styles.category}>
                     <div className={styles.title}>Name</div>
                     <div className={styles.container}>
-                        <input type="text" id="name" name="name"/>
+                        <input type="text" id="name" className={styles.full} name="name"/>
                     </div>
                 </div>
                 <div className={styles.category}>
                     <div className={styles.title}>Email</div>
                     <div className={styles.container}>
-                        <input type="email" id="email" name="email"/>
+                        <input type="email" id="email" className={styles.full} name="email"/>
                     </div>
                 </div>
                 <div className={styles.category}>
                     <div className={styles.title}>Age</div>
                     <div className={styles.container}>
-                        <input type="number" id="age" name="age"/>
+                        <input type="number" id="age" className={styles.full} name="age"/>
                     </div>
                 </div>
                 <div className={styles.category}>
@@ -207,7 +207,7 @@ function Selection() {
                 <div className={styles.category}>
                     <div className={styles.title}>Vacation Length (in days)</div>
                     <div className={styles.container}>
-                        <input type="number" id="vacation_min" name="vacation_min" placeholder="Min days" /> -- <input type="number" id="vacation_max" name="vacation_max" placeholder="Max days" />
+                        <input type="number" id="vacation_min" className={styles.half} name="vacation_min" placeholder="Min days" /> <input type="number" id="vacation_max" className={styles.half} name="vacation_max" placeholder="Max days" />
                     </div>
                 </div>
 

@@ -13,9 +13,8 @@
     font-weight: 600;
     color: black;
     margin: 0px;
-    padding: 0px;
+    padding: 2px 5px;
     background-color: lightpink;
-    padding: 2px;
     border: 2px solid black;
 }
 
@@ -36,6 +35,14 @@
     min-width: fit-content; /* Adjust width to content */
     width: calc((100% / 3) - 20px); /* Adjust width to fit 4 elements per row */
     box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+.full{
+    width: 100%;
+}
+
+.half{
+    width: 45%;
 }
 
 @media (max-width: 800px) {
